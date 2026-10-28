@@ -1,0 +1,25 @@
+[project]
+name = "oil360-dashboard"
+version = "0.1.0"
+description = "Modular Streamlit dashboard for 360-degree oil market monitoring."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "plotly>=5.24",
+  "streamlit>=1.43",
+]
+
+[project.optional-dependencies]
+ibkr = ["ib-insync>=0.9.86"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
